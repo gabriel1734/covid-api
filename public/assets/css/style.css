@@ -1,56 +1,66 @@
-
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-.navBar{
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e3e6f0;
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.navBar h1:hover{
-    margin: 0;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    transition: 0.3s;
-    padding: 15px 15px;
+@media (max-width: 767.98px) { 
+  .show-country{
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .country-table{
+    display: none !important;
+  }
+ }
+
+.navBar {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e3e6f0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBar h1:hover {
+  margin: 0;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+  padding: 15px 15px;
 }
 
 .navBar ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 .navBar ul li {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .navBar ul li a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 .navBar ul li a:hover {
-    transition: 0.3s;
-    color: #fff;
-    background-color: #007bff;
-    border-radius: 5px;
-    padding: 5px 5px;
+  transition: 0.3s;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  padding: 5px 5px;
 }
 
 .grid-container {
-  padding: 10px;
+  padding: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
 }
 
@@ -60,32 +70,59 @@ body {
   padding: 20px;
   text-align: center;
 }
-.h1-home{
-    text-align: center;
-    margin-top: 50px;
-    color: #007bff;
+
+.h1-home {
+  text-align: center;
+  margin-top: 50px;
+  color: #007bff;
 }
+
 .grid-container a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .error-container {
-      text-align: center;
-      min-width: 80%;
-      margin: 100px auto;
-      background-color: #fff;
-      border-radius: 5px;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+  text-align: center;
+  min-width: 80%;
+  margin: 100px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    .error-container h1{
-      font-size: 24px;
-      color: #007bff;
-    }
+.error-container h1 {
+  font-size: 24px;
+  color: #007bff;
+}
 
-    .error-container p{
-      font-size: 16px;
-      margin-top: 10px;
-    }
+.error-container p {
+  font-size: 16px;
+  margin-top: 10px;
+}
 
+.country-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.country-table th,
+.country-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.country-table th {
+  background-color: #f2f2f2;
+}
+
+.country-show{
+  padding: 25px;
+  text-align-last: center;
+  margin-top: 20px;
+}
+
+.show-country{
+  display: none;
+}
