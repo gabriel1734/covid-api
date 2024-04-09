@@ -2,10 +2,12 @@
 
 namespace Application\models;
 
-class Api {
+use Application\core\Database;
+
+class Api extends Database {
   private $url = 'https://dev.kidopilabs.com.br/exercicio/covid.php';
 
-  public static function getAllCountries() {
+  public function getAllCountries() {
     $ch = curl_init($this->url.'?listar_paises=1');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $result = curl_exec($ch);
@@ -13,8 +15,8 @@ class Api {
     return json_decode($result);
   }
 
-  public static function getCountryWithData($country) {
-    $ch = curl_init(.$this->url.'?pais=' . $country);
+  public function getCountryWithData($country) {
+    $ch = curl_init($this->url.'?pais=' . $country);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $result = curl_exec($ch);
     curl_close($ch);
