@@ -1,4 +1,5 @@
-body{
+
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -10,8 +11,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
-
-
 
 .navBar h1:hover{
     margin: 0;
@@ -48,6 +47,28 @@ body{
     padding: 5px 5px;
 }
 
+.grid-container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+.h1-home{
+    text-align: center;
+    margin-top: 50px;
+    color: #007bff;
+}
+.grid-container a {
+    text-decoration: none;
+}
+
 .error-container {
       text-align: center;
       min-width: 80%;
@@ -67,3 +88,4 @@ body{
       font-size: 16px;
       margin-top: 10px;
     }
+

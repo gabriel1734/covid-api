@@ -4,14 +4,14 @@ use Application\components\HeaderComponent;
 
 $header = new HeaderComponent();
 
-
 ?>
+
 <div>
   <?php echo $header->render(); ?>
   <section>
     <h1 class="h1-home">Selecione um país</h1>
     <div class="grid-container">
-      <a href="Countries/show/Brazil">
+      <a href="/Countries/show/Brazil">
         <div class="card">
           <img src="https://flagsapi.com/BR/flat/64.png">
           <p>Brasil</p>
@@ -28,4 +28,3 @@ $header = new HeaderComponent();
     </div>
 
   </section>
-</div>

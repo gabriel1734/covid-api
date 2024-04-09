@@ -62,6 +62,8 @@ class App {
     }
 
     private function getParamsFromUrl($url) {
-        $this->params = $url ? array_values($url) : [];
+        if (count($url) > 3) {
+            $this->params = array_slice($url, 3);
+        }
     }
 }

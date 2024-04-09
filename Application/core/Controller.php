@@ -11,12 +11,13 @@ class Controller
 
     public function model($model)
     {
-        require_once '../Application/models/' . $model . '.php';
-        return new $model;
+        require '../Application/models/' . $model . '.php';
+        $classe = 'Application\\models\\' . $model;
+        return new $classe();
     }
 
     public function pageNotFound()
     {
-        $this->view('erro404');
+        $this->view('error/erro404');
     }
 }
