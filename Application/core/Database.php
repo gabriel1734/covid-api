@@ -32,7 +32,7 @@ class Database extends PDO {
     }
   }
 
-  private function executeQuery($query, $stmt, $params = []) {
+  public function executeQuery($query, $params = []) {
     $stmt = $this->con->prepare($query);
     $this->setQuery($stmt, $params);
     $stmt->execute();
