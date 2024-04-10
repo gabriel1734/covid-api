@@ -1,8 +1,10 @@
 <?php
 
+use Application\components\FooterComponent;
 use Application\components\HeaderComponent;
 
 $header = new HeaderComponent();
+$footer = new FooterComponent();
 
 
 ?>

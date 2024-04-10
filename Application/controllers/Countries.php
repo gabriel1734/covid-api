@@ -15,7 +15,9 @@ class Countries extends Controller
     {
         $Api = $this->model('Api');
         $country = $Api->getCountryWithData($country);
-        $this->view('countries/show', ['country' => $country]);
+        $log = $Api->getLog();
+        $log = ['create_time' => $log[0]['create_time'],'country' => $log[0]['country']];
+        $this->view('countries/show', ['country' => $country, 'log' => $log]);
     }
 }
 

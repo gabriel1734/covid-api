@@ -42,4 +42,4 @@ $footer = new FooterComponent();
     </a>
   </div>
 </section>
-<?php echo $footer->render(); ?>
+<?php echo $footer->render($data['log']['create_time'], $data['log']['country']); ?>

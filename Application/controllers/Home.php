@@ -51,8 +51,9 @@ class Home extends Controller
 
         $Australia = ['mortos' => $mortos, 'casos' => $casos];
 
-        $this->view('home/index', ['Brazil' => $Brazil, 'Canada' => $Canada, 'Australia' => $Australia, 'log' => $log->create_time]);
-        $this->view('home/index');
+        $log = ['create_time' => $log[0]['create_time'],'country' => $log[0]['country']];
+
+        $this->view('home/index', ['Brazil' => $Brazil, 'Canada' => $Canada, 'Australia' => $Australia, 'log' => $log]);
     }
 
 }
