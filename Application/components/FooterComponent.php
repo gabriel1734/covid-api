@@ -8,6 +8,16 @@ class FooterComponent{
     $date = $dataHora[0];
     $date = explode('-', $date);
     $dataHora = $date[2] . '/' . $date[1] . '/' . $date[0] . ' ' . $dataHora[1];
+
+    if($country != null && $dataHora != null){
+      $render = ' <div>
+          <p>Ultima consulta em: ' . $dataHora . '</p>
+          <p>Último país consultado: ' . $country . '</p>
+        </div>';
+    } else {
+      $render = '';
+    }
+
     return '
       <footer class="footer">
         <nav class="grid-footer">
@@ -18,10 +28,7 @@ class FooterComponent{
             <li><a href="/about">About</a></li>
           </ul>
           </nav>
-        <div>
-          <p>Ultima consulta em: ' . $dataHora . '</p>
-          <p>Último país consultado: ' . $country . '</p>
-        </div>
+          '.$render.'
       </footer>
     ';
   }
