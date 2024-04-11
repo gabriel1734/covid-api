@@ -6,12 +6,14 @@ use Application\components\HeaderComponent;
 $header = new HeaderComponent();
 $footer = new FooterComponent();
 
+$nameCountry = str_replace('%20', ' ', $data['nameCountry']);
+
 ?>
 
 <div>
   <?php echo $header->render(); ?>
   <section class="country-show">
-    <h1 class="h1-home">País: <?php echo $data['nameCountry'] ?></h1>
+    <h1 class="h1-home">País: <?php echo $nameCountry; ?></h1>
     <table class="country-table">
       <thead>
         <th>Provincia/Estado</th>
