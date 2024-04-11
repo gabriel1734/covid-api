@@ -11,6 +11,7 @@ $footer = new FooterComponent();
 <div>
   <?php echo $header->render(); ?>
   <section class="country-show">
+    <h1 class="h1-home">País: <?php echo $data['nameCountry'] ?></h1>
     <table class="country-table">
       <thead>
         <th>Provincia/Estado</th>
@@ -30,6 +31,11 @@ $footer = new FooterComponent();
           } else {
             $taxaMorte = 'Indefinida';
           }
+
+          if($country->ProvinciaEstado == ''){
+            $country->ProvinciaEstado = 'Total';
+          }
+
           echo "<tr>";
           echo "<td>$country->ProvinciaEstado</td>";
           echo "<td>$country->Confirmados</td>";
