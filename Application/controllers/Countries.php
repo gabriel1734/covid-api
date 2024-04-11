@@ -8,7 +8,10 @@ class Countries extends Controller
 {
     public function index()
     {
-        $this->view('countries/index');
+        $Api = $this->model('Api');
+        $countries = $Api->getAllCountries();
+        
+        $this->view('countries/index', ['countries' => $countries]);
     }
 
     public function show($country)

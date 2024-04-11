@@ -24,6 +24,11 @@ body {
   .card{
     padding: 10px !important; 
   }
+  .footer{
+    flex-direction: column !important;
+    min-height: 60vh;
+    justify-content: center !important;
+  }
  }
 
 .navBar {
@@ -39,6 +44,10 @@ body {
   margin: 0;
   padding: 15px 15px;
   cursor: pointer;
+}
+.navBar h1 a {
+  text-decoration: none;
+  color: #000
 }
 .navBar h1:hover {
   margin: 0;
