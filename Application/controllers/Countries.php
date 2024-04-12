@@ -19,7 +19,7 @@ class Countries extends Controller
     public function show($country)
     {
         if (empty($country)) {
-            $this->view('error/erro404');
+            $this->pageNotFound();
             die();
         }
         $Api = $this->model('Api');

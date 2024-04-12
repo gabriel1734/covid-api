@@ -9,7 +9,7 @@ $footer = new FooterComponent();
 ?>
 <?php echo $header->render(); ?>
 <section>
-  <h1 class="h1-home">Selecione dois países se quiser fazer uma comparação</h1>
+  <h1 class="h1-home">Selecione dois países para fazer uma comparação</h1>
   <div class="select-div">
     <form action="/Compare/show/" method="get">
       <select name="country1" id="country1">
