@@ -27,7 +27,7 @@ class Countries extends Controller
         $data = $Api->getCountryWithData($country);
 
         if(count(get_object_vars($data)) === 0){
-            $this->view('error/erro404');
+            $this->pageNotFound();
             die();
         }
         
