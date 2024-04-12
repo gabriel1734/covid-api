@@ -33,6 +33,35 @@ Este projeto consiste na construção de um sistema de interface web que permite
 3. A API-Covid-19 retorna os dados de todos os estados do país, você pode mudar o nome do país no final do link para o nome do país que deseja pegar os dados.
 4. A API-Países-Disponíveis retorna o nome de todos os países disponíveis para obter os dados.
 
+## Arquitetura MVC (Model-View-Controller)
+
+O projeto utiliza o padrão de arquitetura MVC (Model-View-Controller) para organizar e separar as responsabilidades das diferentes partes da aplicação. Abaixo está uma breve descrição de cada componente do padrão MVC:
+
+- **Model (Modelo):** Representa a estrutura de dados da aplicação e lida com a lógica de negócios. No contexto deste projeto, os modelos são responsáveis por acessar o banco de dados, recuperar e manipular os dados relacionados aos países e aos acessos à API-Covid-19.
+  
+  - > Encontrado em `Application/models`
+
+- **View (Visualização):** É responsável pela apresentação dos dados aos usuários. As views neste projeto são arquivos HTML que exibem os dados da API-Covid-19 de forma formatada e amigável para o usuário final.
+   - > Encontrado em `Application/views
+ `
+- **Controller (Controlador):** Atua como intermediário entre o modelo e a visualização. Controladores manipulam as solicitações do usuário, processam os dados recebidos do modelo e passam as informações relevantes para as views. Neste projeto, os controladores são responsáveis por rotear as solicitações do usuário para as ações apropriadas, como acessar dados da API-Covid-19, armazenar acessos no banco de dados e exibir as visualizações corretas.
+
+  -  > Encontrado em `Application/controllers`
+
+O uso do padrão MVC ajuda a separar as preocupações da aplicação, tornando-a mais organizada, modular e fácil de manter e escalar. Cada componente tem sua responsabilidade claramente definida, facilitando a colaboração entre membros da equipe e a compreensão do código. Isso também permite uma maior reutilização de código e uma melhor gerência de mudanças ao longo do ciclo de vida do projeto.
+
+## Diretório "core"
+
+O diretório "core" contém os componentes principais da aplicação, responsáveis por fornecer funcionalidades essenciais para o funcionamento do sistema. Abaixo estão os principais componentes encontrados neste diretório:
+
+- **App.php:** Este arquivo contém a classe principal `App`, que é responsável por inicializar e controlar o fluxo da aplicação. Ele gerencia o roteamento das solicitações do usuário para os controladores apropriados, verifica se os arquivos e classes necessários estão presentes e trata casos de página não encontrada.
+
+- **Controller.php:** O arquivo `Controller.php` define a classe base `Controller`, da qual todos os controladores da aplicação herdam. Ele fornece métodos úteis para carregar views, models e lidar com casos de página não encontrada.
+
+- **Model.php:** O arquivo `Database.php` contém a classe base `Model`, que encapsula funcionalidades comuns relacionadas ao acesso ao banco de dados utilizando o `PDO`. Ele fornece métodos para realizar consultas SQL e inserir, atualizar e excluir registros, bem como outras operações relacionadas ao banco de dados.
+
+Esses componentes centrais desempenham um papel fundamental na estrutura e no funcionamento da aplicação, fornecendo uma base sólida para o desenvolvimento de novas funcionalidades e a manutenção do código ao longo do tempo. Eles seguem os princípios do padrão de arquitetura MVC (Model-View-Controller) para garantir uma separação clara de preocupações e uma estrutura de código organizada e modular.
+
 **Link do GitHub:** [https://github.com/seu-usuario/covid-api](https://github.com/seu-usuario/covid-api)
 
 
