@@ -24,9 +24,9 @@ class FooterComponent{
           <ul>
             <li>Menu</li>
             <li><a href="/">Home</a></li>
-            <li><a href="/Countries">Countries</a></li>
-            <li><a href="/Compare">Compare</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/Countries">Países</a></li>
+            <li><a href="/Compare">Comparar</a></li>
+            <li><a href="/about">Sobre</a></li>
           </ul>
           </nav>
           '.$render.'
