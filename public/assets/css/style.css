@@ -101,6 +101,12 @@ body {
   text-align: center;
 }
 
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f2f2f2;
+  transition: 0.3s;
+}
+
 .h1-home {
   text-align: center;
   margin-top: 50px;
@@ -144,6 +150,10 @@ body {
 }
 
 .country-table th {
+  background-color: #f2f2f2;
+}
+
+.country-table tr:hover{
   background-color: #f2f2f2;
 }
 
@@ -222,4 +232,55 @@ section{
 .footer p {
   color: #fff;
   padding: 15px;
+}
+
+.select-div{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.select-div select{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-compare{
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.compare-section{
+  display: flex;
+  justify-content: center;
+
+}
+
+.compare-table{
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.compare-table th {
+  background-color: #f2f2f2;
+}
+
+.compare-table tr:hover {
+  background-color: #f2f2f2;
+}
+
+.compare-table th,
+.compare-table td {
+  
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
