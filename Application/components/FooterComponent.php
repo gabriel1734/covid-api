@@ -9,6 +9,8 @@ class FooterComponent{
     $date = explode('-', $date);
     $dataHora = $date[2] . '/' . $date[1] . '/' . $date[0] . ' ' . $dataHora[1];
 
+    $country = str_replace('%20', ' ', $country);
+
     if($country != null && $dataHora != null){
       $render = ' <div>
           <p>Ultima consulta em: ' . $dataHora . '</p>
