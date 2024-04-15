@@ -10,7 +10,7 @@ class HeaderComponent
       <header>
         <nav class="navbar">
             <div class="navbar-brand">
-              <a href="/" class="nav-link">Covid-19 API</a>
+              <a href="/" class="nav-link">COVID-19 API</a>
             </div>
             <button class="navbar-toggler" id="navbar-toggler">
               <span></span>
